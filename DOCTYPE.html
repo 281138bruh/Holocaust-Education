@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holocaust Heroes</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .hero { margin: 20px 0; padding: 10px; border-bottom: 1px solid #ddd; }
+        .quiz { margin-top: 20px; }
+        .question { font-weight: bold; }
+        button { padding: 10px; margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Holocaust Heroes</h1>
+        <div class="hero">
+            <h2>Chiune Sugihara</h2>
+            <p>A Japanese diplomat who issued thousands of transit visas to Jewish refugees, saving over 6,000 lives.</p>
+        </div>
+        <div class="hero">
+            <h2>Oskar Schindler</h2>
+            <p>A German businessman who saved 1,200 Jews by employing them in his factories and protecting them from Nazi persecution.</p>
+        </div>
+        <div class="quiz">
+            <h2>Quick Quiz</h2>
+            <p class="question">Who was the Japanese diplomat that saved thousands of Jewish refugees?</p>
+            <button onclick="checkAnswer('correct')">Chiune Sugihara</button>
+            <button onclick="checkAnswer('wrong')">Oskar Schindler</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'correct') {
+                document.getElementById('result').innerText = 'Correct!';
+                document.getElementById('result').style.color = 'green';
+            } else {
+                document.getElementById('result').innerText = 'Wrong, try again!';
+                document.getElementById('result').style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
